@@ -15,7 +15,7 @@
     <body>
         <section class="calculator">
             <h1>Calculator</h1>
-            <input type="text" class="display" id="result" readonly/>
+            <input type="text" class="display" id="result" readonly placeholder="Enter value"/>
             <div class="buttons">
                 <button onclick="appendNumber('7')">7</button>
                 <button onclick="appendNumber('8')">8</button>
@@ -27,16 +27,16 @@
                 <button onclick="appendNumber('2')">2</button>
                 <button onclick="appendNumber('3')">3</button>
                 <button onclick="appendNumber('0')">0</button>
-                <button onclick="appendOperator('+')" class="operator_bg">+</button>
+                <button onclick="appendOperator('+')" class="operator_bg" title="Addition">+</button>
                 <button onclick="appendNumber('00')">00</button>
-                <button onclick="appendOperator('-')" class="operator_bg">-</button>
-                <button onclick="appendOperator('*')" class="operator_bg">*</button>
-                <button onclick="appendOperator('/')" class="operator_bg">/</button>
-                <button onclick="appendOperator('**')" class="operator_bg">^</button>
-                <button onclick="deleteChar()" class="operator_bg">D</button>
-                <button onclick="clearSection()" class="operator_bg">AC</button>
+                <button onclick="appendOperator('-')" class="operator_bg" title="Subtract">-</button>
+                <button onclick="appendOperator('*')" class="operator_bg" title="Multiply">*</button>
+                <button onclick="appendOperator('/')" class="operator_bg" title="Divide">/</button>
+                <button onclick="appendOperator('**')" class="operator_bg" title="Root">^</button>
+                <button onclick="deleteChar()" class="operator_bg" title="CTRL + D For Delete">D</button>
+                <button onclick="clearSection()" class="operator_bg" title="CTRL + C For all clear">AC</button>
                 <button onclick="appendDecimal()" class="operator_bg">.</button>
-                <button onclick="calculate()" class="operator_bg equal">=</button>
+                <button onclick="calculate()" class="operator_bg equal" title="Calculate">=</button>
             </div>
             <!-- .calculator > .buttons -->
             <div id="error-message">
