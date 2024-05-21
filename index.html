@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A user-friendly online calculator for basic math operations, percentages, and more." />
+        <meta name="keywords" content="calculator,online calculator,math calculator" />
+        <meta property="og:title" content="Simple Calculator" />
+        <meta property="og:description" content="A user-friendly online calculator for basic math operations, percentages, and more." />
+        
+        <link rel="shortcut icon" href="images/calculator.png" type="image/x-icon" />
+        <title>Basic - Calculator</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <section class="calculator">
+            <h1>Calculator</h1>
+            <input type="text" class="display" id="result" readonly/>
+            <div class="buttons">
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendOperator('+')" class="operator_bg">+</button>
+                <button onclick="appendNumber('00')">00</button>
+                <button onclick="appendOperator('-')" class="operator_bg">-</button>
+                <button onclick="appendOperator('*')" class="operator_bg">*</button>
+                <button onclick="appendOperator('/')" class="operator_bg">/</button>
+                <button onclick="appendOperator('**')" class="operator_bg">^</button>
+                <button onclick="deleteChar()" class="operator_bg">D</button>
+                <button onclick="clearSection()" class="operator_bg">AC</button>
+                <button onclick="appendDecimal()" class="operator_bg">.</button>
+                <button onclick="calculate()" class="operator_bg equal">=</button>
+            </div>
+            <!-- .calculator > .buttons -->
+            <div id="error-message">
+            
+            </div>
+            <!-- .calculator > .error-message -->
+        </section>  
+        <!-- .calculator -->
+
+        <script src="js/script.js"></script>
+        <!-- js -->
+    </body>
+</html>

@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-align: baseline;
+    box-sizing: border-box;
+    font-family: "Digital7";
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+}
+ul, ol ,dl {
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --primary-color: #ffeae3;
+    --bg-color: #ff6500;
+    --secondary-color: #ff8a08;
+    --tertiary-color: #ffc100;
+}
+@font-face {
+    font-family: "Digital7";
+    src: url("../fonts/genaral/Digital7-rg1mL.woff") format("woff");
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Digital7Monoitalic";
+    src: url("../fonts/genaral/Digital7Monoitalic-8MDLJ.woff") format("woff");
+    font-weight: bold;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(var(--secondary-color),var(--bg-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.calculator {
+    display: inline-block;
+    background: #3a4452;
+    height: 550px;
+    width: 28rem;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(145, 130, 130);
+    border-radius: 4px;
+}
+.calculator h1 {
+    text-align: center;
+    margin-bottom: .25rem;
+    font-size: 28px;
+    color: var(--primary-color);
+}
+.calculator .display {
+    color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+    outline: none;
+    padding: .8rem 1.4rem;
+    text-align: right;
+    font-size: 28px;
+    background: transparent;
+    border-radius: .5rem;
+    margin-bottom: 15px;
+    font-family: "Digital7Monoitalic";
+}
+.calculator .buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.calculator .buttons button {
+    width: 30%;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid var(--bg-color);
+    border-radius: .5rem;
+    font-size: 32px;
+    margin-bottom: 12px;
+    box-shadow: -.5rem -.5rem .6rem rgba(255, 255, 255, .1),.2rem .2rem .4rem rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.calculator .buttons button.equal {
+    width: 65%;
+}
+.calculator .buttons button:hover {
+    border: 1px solid #ffffff;
+}
+.calculator .buttons button:active {
+    border: 2px solid var(--bg-color);
+}
+.calculator .buttons .operator_bg {
+    color: var(--tertiary-color);
+}
+#error-message {
+    font-size: 1.3rem;
+    padding: .3rem .6rem;
+    background: red;
+    color:var(--primary-color);
+    margin-bottom: .4rem;
+    display: none;
+    border-radius: .5rem;
+}
