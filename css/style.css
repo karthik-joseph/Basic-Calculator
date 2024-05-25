@@ -92,10 +92,13 @@ body {
     width: 65%;
 }
 .calculator .buttons button:hover {
-    border: 1px solid #ffffff;
+    /* border: 1px solid #ffffff; */
+    background: var(--bg-color);
+    color: #000;
 }
 .calculator .buttons button:active {
-    border: 2px solid var(--bg-color);
+    color: #fff;
+    background: transparent;
 }
 .calculator .buttons .operator_bg {
     color: var(--tertiary-color);
