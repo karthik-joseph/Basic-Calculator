@@ -1,36 +1,54 @@
 let currentString = "";
-const displaValue = document.getElementById("result"); 
+const displayValue = document.getElementById("result"); 
 
 //  Get the number 
 function appendNumber(number) {
     currentString += number;
-    displaValue.value = currentString;
-}
+    displayValue.value = currentString;
+};
+
 // Get the Operator
 function appendOperator(operator) {
     currentString += operator;
-    displaValue.value = currentString;
-}
+    displayValue.value = currentString;
+};
 
 // Get the Decimal
 function appendDecimal() {
     if(!currentString.includes(".")) {
         currentString += ".";
-        displaValue.value = currentString;
-    }
-}
+        displayValue.value = currentString;
+    };
+};
 
 // Delete the End character
 function deleteChar() {
     currentString = currentString.slice(0, -1);
-    displaValue.value = currentString;
-}
+    displayValue.value = currentString;
+};
 
 // Delete the whole string
 function clearSection() {
     currentString = "";
-    displaValue.value = currentString;
-}
+    displayValue.value = currentString;
+};
+
+
+// Error handling function
+function handleError(errorMessage) {
+    const errorMessageDiv = document.getElementById("error-message");
+    errorMessageDiv.innerHTML = errorMessage;
+    errorMessageDiv.style.display = "block";
+  
+    setTimeout(() => {
+      errorMessageDiv.innerHTML = "";
+      errorMessageDiv.style.display = "none";
+    }, 2500);
+  
+    currentString = "";
+    displayValue.value = currentString;
+  }
+
 // To get the KeyBoard Characters
 document.addEventListener("keypress", function(event) {
     const key = event.key;
@@ -62,7 +80,7 @@ document.addEventListener("keypress", function(event) {
     } else {
         return 0;
     }
-    return displaValue.value = currentString;
+    return displayValue.value = currentString;
 });
 
 
@@ -70,19 +88,9 @@ document.addEventListener("keypress", function(event) {
 function calculate() {
     try {
         let result = eval(currentString);
-        displaValue.value = result;
+        displayValue.value = result;
         currentString = result
     } catch(error) {
-        const errorMessageDiv = document.getElementById("error-message");
-        errorMessageDiv.innerHTML = error.message;
-        errorMessageDiv.style.display = "block";
-
-        setTimeout(()=>{
-            errorMessageDiv.innerHTML = "";
-            errorMessageDiv.style.display = "none";
-        },2500)
-        
-        currentString = "";
-        displaValue.value = currentString
-    }
-}
+        handleError(error.message);
+    };
+};
